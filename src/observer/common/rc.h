@@ -75,8 +75,9 @@ See the Mulan PSL v2 for more details. */
   DEFINE_RC(VARIABLE_NOT_VALID)          \
   DEFINE_RC(LOGBUF_FULL)                 \
   DEFINE_RC(LOG_FILE_FULL)               \
-  DEFINE_RC(LOG_ENTRY_INVALID)
-
+  DEFINE_RC(LOG_ENTRY_INVALID)           \
+  DEFINE_RC(IOERR_UNLINK)                \
+  DEFINE_RC(SCHEMA_INDEX_NOT_EXIST)
 enum class RC
 {
 #define DEFINE_RC(name) name,

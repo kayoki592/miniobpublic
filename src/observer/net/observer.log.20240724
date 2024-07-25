@@ -1,0 +1,120 @@
+[2024-07-24 10:05:06.965584 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t2
+[2024-07-24 10:05:06.972742 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2024-07-24 10:05:06.973346 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=0, name=t2
+[2024-07-24 10:05:06.981287 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_file@disk_buffer_pool.cpp:833] >> Successfully create miniob/db/sys/t2.data.
+[2024-07-24 10:05:06.982784 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:234] >> Successfully open buffer pool file miniob/db/sys/t2.data.
+[2024-07-24 10:05:06.987117 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:272] >> Successfully open miniob/db/sys/t2.data. file_desc=7, hdr_frame=0x7ffff6efa808, file header=pageCount:1, allocatedCount:1
+[2024-07-24 10:05:06.988495 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2024-07-24 10:05:06.988726 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2024-07-24 10:05:06.988800 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t2
+[2024-07-24 10:05:06.988870 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_table@db.cpp:160] >> Create table success. table name=t2, table_id:0
+[2024-07-24 10:05:06.991105 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t2
+[2024-07-24 10:05:06.991177 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t2.
+[2024-07-24 10:05:07.003817 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:246] >> double write buffer flush pages ret=SUCCESS
+[2024-07-24 10:05:07.004998 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: flush_meta@db.cpp:379] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2024-07-24 10:05:07.005111 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:265] >> Successfully sync db. db=sys
+[2024-07-24 10:05:07.005396 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: execute@command_executor.cpp:94] >> sync db after ddl. rc=0
+[2024-07-24 10:05:18.244050 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:06:05.829497 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=23): create table  (i int)
+
+[2024-07-24 10:06:05.832782 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:06:38.073861 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=24): create table t3(i int)
+
+[2024-07-24 10:07:06.137420 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t3
+[2024-07-24 10:07:06.137548 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2024-07-24 10:07:06.137569 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=1, name=t3
+[2024-07-24 10:07:06.137990 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_file@disk_buffer_pool.cpp:833] >> Successfully create miniob/db/sys/t3.data.
+[2024-07-24 10:07:06.138036 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:234] >> Successfully open buffer pool file miniob/db/sys/t3.data.
+[2024-07-24 10:07:06.138111 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:272] >> Successfully open miniob/db/sys/t3.data. file_desc=9, hdr_frame=0x7ffff6efc898, file header=pageCount:1, allocatedCount:1
+[2024-07-24 10:07:06.138160 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2024-07-24 10:07:06.138180 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2024-07-24 10:07:06.138208 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t3
+[2024-07-24 10:07:06.138239 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_table@db.cpp:160] >> Create table success. table name=t3, table_id:1
+[2024-07-24 10:07:06.138339 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t3
+[2024-07-24 10:07:06.138371 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t3.
+[2024-07-24 10:07:06.138461 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t2
+[2024-07-24 10:07:06.138490 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t2.
+[2024-07-24 10:07:06.145956 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:246] >> double write buffer flush pages ret=SUCCESS
+[2024-07-24 10:07:06.146214 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: flush_meta@db.cpp:379] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2024-07-24 10:07:06.146292 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:265] >> Successfully sync db. db=sys
+[2024-07-24 10:07:06.146319 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: execute@command_executor.cpp:94] >> sync db after ddl. rc=0
+[2024-07-24 10:07:15.761667 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:07:51.284131 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=24): create table t5(i int)
+
+[2024-07-24 10:09:20.608137 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t5
+[2024-07-24 10:09:20.608336 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2024-07-24 10:09:20.608364 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=2, name=t5
+[2024-07-24 10:09:20.608823 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_file@disk_buffer_pool.cpp:833] >> Successfully create miniob/db/sys/t5.data.
+[2024-07-24 10:09:20.608877 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:234] >> Successfully open buffer pool file miniob/db/sys/t5.data.
+[2024-07-24 10:09:20.609060 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:272] >> Successfully open miniob/db/sys/t5.data. file_desc=11, hdr_frame=0x7ffff6efe928, file header=pageCount:1, allocatedCount:1
+[2024-07-24 10:09:20.609113 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2024-07-24 10:09:20.609129 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2024-07-24 10:09:20.609142 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t5
+[2024-07-24 10:09:20.609175 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_table@db.cpp:160] >> Create table success. table name=t5, table_id:2
+[2024-07-24 10:09:20.609287 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t5
+[2024-07-24 10:09:20.609303 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t5.
+[2024-07-24 10:09:20.609369 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t3
+[2024-07-24 10:09:20.609404 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t3.
+[2024-07-24 10:09:20.609487 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t2
+[2024-07-24 10:09:20.609513 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t2.
+[2024-07-24 10:09:20.611960 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:246] >> double write buffer flush pages ret=SUCCESS
+[2024-07-24 10:09:20.612218 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: flush_meta@db.cpp:379] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2024-07-24 10:09:20.612297 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:265] >> Successfully sync db. db=sys
+[2024-07-24 10:09:20.612324 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: execute@command_executor.cpp:94] >> sync db after ddl. rc=0
+[2024-07-24 10:09:20.612404 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:10:26.273112 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=24): create table t4(i int)
+
+[2024-07-24 10:16:50.642944 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t4
+[2024-07-24 10:16:50.643096 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2024-07-24 10:16:50.643118 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=3, name=t4
+[2024-07-24 10:16:50.643541 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_file@disk_buffer_pool.cpp:833] >> Successfully create miniob/db/sys/t4.data.
+[2024-07-24 10:16:50.643603 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:234] >> Successfully open buffer pool file miniob/db/sys/t4.data.
+[2024-07-24 10:16:50.643870 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:272] >> Successfully open miniob/db/sys/t4.data. file_desc=13, hdr_frame=0x7ffff6f009b8, file header=pageCount:1, allocatedCount:1
+[2024-07-24 10:16:50.643947 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2024-07-24 10:16:50.643980 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2024-07-24 10:16:50.643997 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t4
+[2024-07-24 10:16:50.644013 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_table@db.cpp:160] >> Create table success. table name=t4, table_id:3
+[2024-07-24 10:19:24.217047 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t4
+[2024-07-24 10:19:32.160157 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t4.
+[2024-07-24 10:19:39.598130 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t5
+[2024-07-24 10:19:42.078837 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t5.
+[2024-07-24 10:19:49.032099 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t3
+[2024-07-24 10:19:52.523590 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t3.
+[2024-07-24 10:19:57.271277 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t2
+[2024-07-24 10:19:58.612220 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t2.
+[2024-07-24 10:20:09.159798 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:246] >> double write buffer flush pages ret=SUCCESS
+[2024-07-24 10:20:13.416400 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: flush_meta@db.cpp:379] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2024-07-24 10:20:14.880584 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:265] >> Successfully sync db. db=sys
+[2024-07-24 10:20:23.900393 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: execute@command_executor.cpp:94] >> sync db after ddl. rc=0
+[2024-07-24 10:21:07.323812 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:22:25.196395 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=24): create table t6(i int)
+
+[2024-07-24 10:25:38.622301 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t6
+[2024-07-24 10:25:38.622449 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2024-07-24 10:25:38.622470 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=4, name=t6
+[2024-07-24 10:25:38.622878 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_file@disk_buffer_pool.cpp:833] >> Successfully create miniob/db/sys/t6.data.
+[2024-07-24 10:25:38.622947 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:234] >> Successfully open buffer pool file miniob/db/sys/t6.data.
+[2024-07-24 10:25:38.623250 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: open_file@disk_buffer_pool.cpp:272] >> Successfully open miniob/db/sys/t6.data. file_desc=15, hdr_frame=0x7ffff6f02a48, file header=pageCount:1, allocatedCount:1
+[2024-07-24 10:25:38.623324 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2024-07-24 10:25:38.623345 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2024-07-24 10:25:38.623357 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t6
+[2024-07-24 10:25:38.623375 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: create_table@db.cpp:160] >> Create table success. table name=t6, table_id:4
+[2024-07-24 10:25:38.623642 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t6
+[2024-07-24 10:25:38.623665 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t6.
+[2024-07-24 10:25:38.623864 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t4
+[2024-07-24 10:25:38.623898 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t4.
+[2024-07-24 10:25:38.623999 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t5
+[2024-07-24 10:25:38.624036 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t5.
+[2024-07-24 10:25:38.624112 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t3
+[2024-07-24 10:25:38.624140 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t3.
+[2024-07-24 10:25:38.624213 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@table.cpp:526] >> Sync table over. table=t2
+[2024-07-24 10:25:38.624248 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:241] >> Successfully sync table db:sys, table:t2.
+[2024-07-24 10:25:38.627028 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:246] >> double write buffer flush pages ret=SUCCESS
+[2024-07-24 10:25:38.627283 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: flush_meta@db.cpp:379] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2024-07-24 10:25:38.627344 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: sync@db.cpp:265] >> Successfully sync db. db=sys
+[2024-07-24 10:25:38.627376 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: execute@command_executor.cpp:94] >> sync db after ddl. rc=0
+[2024-07-24 10:25:38.627505 pid:209770 tid:7ffff257a640 ctx:60300001f7b0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2024-07-24 10:26:28.709960 pid:209770 tid:7ffff257a640 ctx:0 INFO: read_event@plain_communicator.cpp:82] >> The peer has been closed 127.0.0.1:44209
+[2024-07-24 10:26:28.710758 pid:209770 tid:7ffff257a640 ctx:0 ERROR: operator()@one_thread_per_connection_thread_handler.cpp:98] >> handle error. rc = IOERR_CLOSE
+[2024-07-24 10:26:28.710785 pid:209770 tid:7ffff257a640 ctx:0 INFO: operator()@one_thread_per_connection_thread_handler.cpp:103] >> worker thread stop. communicator = 0x60b000000670
+[2024-07-24 10:26:28.723201 pid:209770 tid:7ffff257a640 ctx:0 INFO: close_connection@one_thread_per_connection_thread_handler.cpp:154] >> close connection. communicator = 0x60b000000670

@@ -160,7 +160,32 @@ RC Db::create_table(const char *table_name, span<const AttrInfoSqlNode> attribut
   LOG_INFO("Create table success. table name=%s, table_id:%d", table_name, table_id);
   return RC::SUCCESS;
 }
+RC Db::drop_table(const char *table_name){
+  RC rc = RC::SUCCESS;
+  auto it = opened_tables_.find(table_name);
+  LOG_WARN("%s", it);
+  if(it == opened_tables_.end()){//find从头往后找，没找到就在.end()
+    LOG_WARN("%s has not been opened before.", table_name);
+    return RC::SCHEMA_TABLE_NOT_EXIST;
+  }
+  Table *table = it->second;
+  table->drop_all_indexes();
 
+  delete table;
+  opened_tables_.erase(it);
+  auto table_file_name = table_data_file(path_.c_str(), table_name);
+  auto table_meta_name = table_meta_file(path_.c_str(), table_name);
+  if (unlink(table_file_name.c_str()) == -1) {
+    LOG_ERROR("Failed to delete table (%s) data file %s.", table_name, table_file_name.c_str());
+    return RC::IOERR_UNLINK;
+  }
+  if (unlink(table_meta_name.c_str()) == -1) {
+    LOG_ERROR("Failed to delete table (%s) data meta file %s.", table_name, table_meta_name.c_str());
+    return RC::IOERR_UNLINK;
+  }
+  return RC::SUCCESS;
+  return rc;
+}
 Table *Db::find_table(const char *table_name) const
 {
   unordered_map<string, Table *>::const_iterator iter = opened_tables_.find(table_name);
@@ -265,7 +290,6 @@ RC Db::sync()
   LOG_INFO("Successfully sync db. db=%s", name_.c_str());
   return rc;
 }
-
 RC Db::recover()
 {
   LOG_TRACE("db recover begin. check_point_lsn=%d", check_point_lsn_);

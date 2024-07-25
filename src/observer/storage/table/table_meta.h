@@ -33,7 +33,7 @@ class TableMeta : public common::Serializable
 public:
   TableMeta()          = default;
   virtual ~TableMeta() = default;
-
+  RC drop_index(const char *index_name);
   TableMeta(const TableMeta &other);
 
   void swap(TableMeta &other) noexcept;

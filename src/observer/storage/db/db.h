@@ -13,7 +13,6 @@ See the Mulan PSL v2 for more details. */
 //
 
 #pragma once
-
 #include "common/rc.h"
 #include "common/lang/vector.h"
 #include "common/lang/string.h"
@@ -65,7 +64,7 @@ public:
    */
   RC create_table(const char *table_name, span<const AttrInfoSqlNode> attributes,
       const StorageFormat storage_format = StorageFormat::ROW_FORMAT);
-
+  RC drop_table(const char *table_name);
   /**
    * @brief 根据表名查找表
    */
